@@ -65,7 +65,6 @@ cat << EOF >> /etc/hosts
 192.168.2.61  node1.example.com  node1  web1.example.com  web1
 192.168.2.62  node2.example.com  node2  web2.example.com   web2
 192.168.2.63  node3.example.com  node3  web3.example.com   web3
-192.168.2.80  testnode.examlple.com	  testnode  test.example.com  test
 EOF
 
 printf "\n"
