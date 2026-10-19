@@ -74,7 +74,7 @@ sleep 3
 printf "⑨  nmap을 설치합니다.\n"
 yum -y -q install nmap
 sleep 3
-printf "⑧  user1, user2 계정을 생성합니다.\n"
+printf "⑩  user1, user2 계정을 생성합니다.\n"
 useradd user1
 useradd user2
 echo "centos" | passwd --stdin user1
@@ -89,10 +89,10 @@ printf "======================================\n"
 printf "\n"
 sleep 3
 cd
-printf "⑩  sestatus 를 실시하여 SElinux 모드가 permissive 로 변경되었는지 확인하세요.\n"
-printf "⑪  systemctl status firewalld 를 실시하여 방화벽 상태가 inactive 으로 변경되었는지 확인하세요.\n"
-printf "⑫  cat .vimrc 를 실시하여 set 설정 내용이 저장되었는지 확인하세요.\n"
-printf "⑬  cat .bashrc 를 실시하여 alias 설정과 PS1 환경 변수 내용이 저장되었는지 확인하세요.\n"
-printf "⑭  cat /etc/hosts 를 실시하여 도메인과 IP 주소를 확인하세요.\n"
-printf "⑮  확인이 완료되었다면, init 0 명령을 실시하여 시스템을 정상 종료하세요.\n"
+printf "⑪  sestatus 를 실시하여 SElinux 모드가 permissive 로 변경되었는지 확인하세요.\n"
+printf "⑫  systemctl status firewalld 를 실시하여 방화벽 상태가 inactive 으로 변경되었는지 확인하세요.\n"
+printf "⑬  cat .vimrc 를 실시하여 set 설정 내용이 저장되었는지 확인하세요.\n"
+printf "⑭  cat .bashrc 를 실시하여 alias 설정과 PS1 환경 변수 내용이 저장되었는지 확인하세요.\n"
+printf "⑮  cat /etc/hosts 를 실시하여 도메인과 IP 주소를 확인하세요.\n"
+printf "   확인이 완료되었다면, init 0 명령을 실시하여 시스템을 정상 종료하세요.\n"
 printf "\n"
