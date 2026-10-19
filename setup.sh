@@ -64,15 +64,21 @@ printf "⑧  /etc/hosts 파일에 설정을 추가합니다.\n"
 cat << EOF >> /etc/hosts 
 192.168.2.60  master.example.com  master  control.example.com  control
 192.168.2.61  node1.example.com  node1  web1.example.com  web1
-192.168.2.62  node2.example.com  node2  web2.example.com   web2
-192.168.2.63  node3.example.com  node3  web3.example.com   web3
+192.168.2.62  node2.example.com  node2  web2.example.com  web2
+192.168.2.63  node3.example.com  node3  web3.example.com  web3
+192.168.2.80  loadbalancer.examlple.com	 loadbalancer
 EOF
 
 printf "\n"
 sleep 3
 printf "⑨  nmap을 설치합니다.\n"
 yum -y -q install nmap
-
+sleep 3
+printf "⑧  user1, user2 계정을 생성합니다.\n"
+useradd user1
+useradd user2
+echo "centos" | passwd --stdin user1
+echo "centos" | passwd --stdin user2
 printf "\n"
 echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
 systemctl restart sshd
